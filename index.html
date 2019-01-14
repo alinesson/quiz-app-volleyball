@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Volleyball Quiz</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>Volleyball Quiz</h1>
+    </header>
+    <main>
+        <div><span id="count"></span></div>
+        <div><span id="score"></span></div>
+        <form>
+            <fieldset>
+                <legend id="question">the question here</legend>
+                <div id="intro"></div>
+                <div id="result">
+                    <p></p>
+                </div>
+                <div id="end-results"></div>
+                    <div class="radio-item">
+                        <input type="radio" name="answers" id="answer-0" value="0">
+                        <label for="answer-0"><span>Answer One</span></label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="answers" id="answer-1"  value="1">
+                        <label for="answer-1"><span>Answer Two</span></label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="answers" id="answer-2" value="2">
+                        <label for="answer-2"><span>Answer Three</span></label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="answers" id="answer-3" value="3">
+                        <label for="answer-3"><span>Answer Four</span></label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="answers" id="answer-4" value="4">
+                        <label for="answer-4"><span>Answer Five</span></label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="answers" id="answer-5" value="5">
+                        <label for="answer-5"><span>Answer Six</span></label>
+                    </div>
+                
+                
+            </fieldset>
+            <button id="button-submit" class="button" type="submit">Submit</button>
+            <button id="button-continue" class="button" type="button">Continue</button>
+        </form>
+    </main>
+
+    <!-- link to jquery -->
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+
+    <!-- link to your app.js -->
+    <script src="app.js"></script>    
+    
+</body>
+</html>
