@@ -79,7 +79,7 @@ var STORE = { // currentQuestion, currentAnswersCorrect, currentUserAnswer, ques
 				},{
 					// [10]
 					q: 'What is a party ball?',
-					a: ['A ball that is can be attacked on first contact', 'A ball filled with beer', 'A ball that can easily be passed', 'A ball that falls between multiple players', null, null],
+					a: ['A ball that can be attacked on first contact', 'A ball filled with beer', 'A ball that can easily be passed', 'A ball that falls between multiple players', null, null],
 					u: null,
 					c: 0, 
 					r: null
@@ -99,9 +99,12 @@ function getUserAnswer(event){ //Gets checked answer
 	return STORE.currentUserAnswer;
 }
 
+
+
 function handleSubmit(event){ //Handles submit
 	event.preventDefault();
-
+    $('#error').text('');
+    
 	if(STORE.currentQ == 11 ){ //If at end, submit will reload entire quiz
 		console.log('RESTART');
 		window.location.href='';
@@ -112,9 +115,15 @@ function handleSubmit(event){ //Handles submit
 	}
 	else{
 		console.log('SUBMIT');
-		storeUserAnswer(getUserAnswer());
-		checkUserAnswer(getUserAnswer());
-	}
+        console.log($('input:checked').val());
+        if ($('input:checked').val() === undefined){
+			$('#error').text('You forgot to pick an answer baller!');
+        }
+        else {
+            storeUserAnswer(getUserAnswer());
+            checkUserAnswer(getUserAnswer());
+        }
+    }
 }
 
 function storeUserAnswer(answer){ // Push stored User Answer into the answerHistory array
@@ -152,7 +161,7 @@ function getResults(){ // Match each user answer with appropriate question
 
 // Render functions
 function initSelection(){ // CHECK FIRST RADIO AND GET IT AS THE CURRENT ANSWER
-	$('input[type=radio]:first').prop('checked', true);
+	$('input[value="'+STORE.currentUserAnswer+'"').prop('checked', false);
 	getUserAnswer();
 }
 

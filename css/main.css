@@ -105,6 +105,7 @@ fieldset{
 .correct {color: #87D37C}
 .incorrect {color: #F2784B}
 
+
 @media (max-width: 500px){
 	h1{font-size: 1.5em;margin:0.10rem;}
 	#count{font-size: 0.75em;}

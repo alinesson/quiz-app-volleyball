@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Volleyball Quiz</title>
-
+    <meta name="desciption" content= "Volleyball Quiz - How well do you know Volleyball?">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/float-grid.css" />
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <header>
@@ -15,7 +18,7 @@
     <main>
         <div><span id="count"></span></div>
         <div><span id="score"></span></div>
-        <form>
+        <form id="myform">
             <fieldset>
                 <legend id="question">the question here</legend>
                 <div id="intro"></div>
@@ -47,8 +50,8 @@
                         <input type="radio" name="answers" id="answer-5" value="5">
                         <label for="answer-5"><span>Answer Six</span></label>
                     </div>
-                
-                
+                    <br>
+                    <div><span id="error"></span></div>
             </fieldset>
             <button id="button-submit" class="button" type="submit">Submit</button>
             <button id="button-continue" class="button" type="button">Continue</button>
@@ -56,10 +59,12 @@
     </main>
 
     <!-- link to jquery -->
-    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
 
     <!-- link to your app.js -->
-    <script src="app.js"></script>    
+    <script src="js/app.js"></script>    
     
 </body>
 </html>
